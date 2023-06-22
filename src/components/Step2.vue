@@ -4,7 +4,7 @@
       <Steps :model="items" :readonly="true" aria-label="Form Steps"/>
     </div>
     <nav class="flex justify-between items-center">
-      <h1 class="text-xl text-slate-600 font-bold">Select your pet type</h1>
+      <h1 class="text-xl text-slate-600 font-bold">Select the Face</h1>
       <button @click="checkStatus" :class="{'disabled': 'isAvail'}" class="bg-yellow-500 disabled:bg-yellow-500/50 px-10 py-1 rounded-lg text-lg font-semibold">Next</button>
     </nav>
   </section>

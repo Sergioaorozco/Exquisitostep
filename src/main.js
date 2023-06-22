@@ -10,6 +10,7 @@ import Step1 from './components/Step1.vue'
 import Step2 from './components/Step2.vue'
 import Step3 from './components/Step3.vue'
 import Step4 from './components/Step4.vue'
+import FinalStep from './components/FinalStep.vue'
 import Steps from 'primevue/steps';
 
 // Styles
@@ -22,6 +23,7 @@ const routes = [
   {path: '/step2', component: Step2},
   {path: '/step3', component: Step3},
   {path: '/step4', component: Step4},
+  {path: '/finalStep', component: FinalStep},
 ]
 
 const router = createRouter({
