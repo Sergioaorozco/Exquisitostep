@@ -15,7 +15,7 @@ export default {
 <template>
   <div class="wrapper flex flex-col justify-between h-screen py-10 px-10 lg:px-0">
     <nav class="flex justify-between">
-      <img src="Animal" alt="logoMultiStep">
+      <router-link to="/"><img src="Animal" alt="logoMultiStep"></router-link>
       <ul class="flex justify-between gap-x-5">
         <li>About</li>
         <li>Github</li>
@@ -23,7 +23,7 @@ export default {
     </nav>
     <router-view></router-view>
     <footer class="flex justify-between">
-      <img src="Animal" alt="logoMultiStep">
+      <router-link to="/"><img src="Animal" alt="logoMultiStep"></router-link>
       <p>Developed by Sorozco</p>
     </footer>
   </div>

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import PrimeVue from 'primevue/config';
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 // Components
@@ -8,6 +9,10 @@ import Home from './components/Home.vue'
 import Step1 from './components/Step1.vue'
 import Step2 from './components/Step2.vue'
 import Step3 from './components/Step3.vue'
+
+// Styles
+import "primevue/resources/themes/lara-light-indigo/theme.css";     
+import "primevue/resources/primevue.min.css";
 
 const routes = [
   {path: '/', component: Home},
@@ -24,4 +29,5 @@ const router = createRouter({
 
 const app = createApp(App)
 app.use(router)
+app.use(PrimeVue)
 app.mount('#app')
