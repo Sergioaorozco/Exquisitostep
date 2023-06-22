@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper flex flex-col justify-between h-screen py-10">
+  <div class="wrapper flex flex-col justify-between h-screen py-10 px-10 lg:px-0">
     <nav class="flex justify-between">
       <img src="Animal" alt="logoMultiStep">
       <ul class="flex justify-between gap-x-5">
