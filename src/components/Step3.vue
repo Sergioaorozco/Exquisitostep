@@ -59,11 +59,10 @@ export default {
   methods: {
     checkStatus(e) {
       e.preventDefault();
-      console.log('activated');
       this.$router.push('/step4');
     },
     selectItem(item) {
-      this.isSelected = item.face
+      this.isSelected = item.body
       this.isAvail = true;
       this.cadStore.completeBody.body = item.body
     }
