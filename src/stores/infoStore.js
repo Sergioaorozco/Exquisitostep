@@ -7,6 +7,7 @@ export const useCadStore = defineStore('character', {
         character: "",
         body: "",
         face: "",
+        name: "",
       },
     }
   }
