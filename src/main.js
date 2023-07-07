@@ -1,5 +1,6 @@
+// Dependencies
 import { createApp } from 'vue'
-import './style.css'
+import { createPinia, setMapStoreSuffix } from 'pinia'
 import App from './App.vue'
 import PrimeVue from 'primevue/config';
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -16,6 +17,7 @@ import Steps from 'primevue/steps';
 // Styles
 import "primevue/resources/themes/lara-light-indigo/theme.css";     
 import "primevue/resources/primevue.min.css";
+import './style.css'
 
 const routes = [
   {path: '/', component: Home},
@@ -31,10 +33,12 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes, // short for `routes: routes`
 })
-
+setMapStoreSuffix('')
+const pinia = createPinia()
 const app = createApp(App)
 app.use(router)
 app.use(PrimeVue)
+app.use(pinia)
 app.component('Steps', Steps);
 
 app.mount('#app')

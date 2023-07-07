@@ -12,7 +12,7 @@
     <section>
       <div class="grid grid-cols-3 mt-10 gap-4">
         <figure v-for="(item,index) in details" class="w-full">
-          <div @click="selectItem(item)" :key="index" :class="{'border-amber-200 border-4': isSelected === item.name}" class="hover:bg-slate-100 cursor-pointer py-10 border  text-center w-full rounded-lg">{{item.name}}</div>
+          <div @click="selectItem(item)" :key="index" :class="{'border-amber-200 border-4 bg-amber-50': isSelected === item.name}" class="hover:bg-amber-50 hover:border-amber-200 cursor-pointer py-10 border  text-center w-full rounded-lg">{{item.name}}</div>
         </figure>
       </div>
     </section>
@@ -20,10 +20,13 @@
 </template>
 
 <script>
+import { useCadStore } from '../stores/infoStore'
+
 export default {
   data() {
     return {
       isAvail: false,
+      cadStore: useCadStore(),
       isSelected: null,
       details: [
         {name:'Pollito', img:'this is an image'},
@@ -62,8 +65,7 @@ export default {
     selectItem(item) {
       this.isSelected = item.name
       this.isAvail = true;
-      // selectedItem.classList.add('border-amber-200')
-
+      this.cadStore.completeBody.character = item.name
     }
   },
   components: {
